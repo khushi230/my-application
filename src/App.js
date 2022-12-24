@@ -8,6 +8,7 @@ import About from "./pages/about";
 import Articles from "./pages/articlesList";
 import Navbar from "./utils/NavBar";
 import Article from "./pages/article";
+import NotFoundPage from "./utils/NotFoundPage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route exact path="/about" element={<About />} />
             <Route exact path="/articles" element={<Articles />} />
             <Route exact path="/articles/:articleId" element={<Article />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </div>
       </div>
