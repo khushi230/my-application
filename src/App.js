@@ -18,9 +18,9 @@ function App() {
         <div id="page-body">
           <Routes>
             <Route path="/" element={<Homepage />} />
-            <Route exact path="/about" element={<About />} />
-            <Route exact path="/articles" element={<Articles />} />
-            <Route exact path="/articles/:articleId" element={<Article />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/articles" element={<Articles />} />
+            <Route path="/articles/:articleId" element={<Article />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </div>

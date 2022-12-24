@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 
 import { articles } from "../../utils/articleContent";
+import NotFoundPage from "../../utils/NotFoundPage";
 
 const Article = () => {
   const [article, setArticle] = useState({});
@@ -12,6 +13,8 @@ const Article = () => {
     let articleData = articles.find((article) => article.name === articleId);
     setArticle(articleData);
   }, [articleId]);
+
+  if (!article?.title) return <NotFoundPage />;
 
   return (
     <div style={{ paddingTop: "20px" }}>
