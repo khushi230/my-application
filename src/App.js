@@ -5,7 +5,7 @@ import "./App.css";
 
 import Homepage from "./pages/homepage";
 import About from "./pages/about";
-import ArticlesList from "./pages/articlesList";
+import Articles from "./pages/articlesList";
 import Navbar from "./utils/NavBar";
 import Article from "./pages/article";
 
@@ -18,7 +18,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route exact path="/about" element={<About />} />
-            <Route exact path="/articles" element={<ArticlesList />} />
+            <Route exact path="/articles" element={<Articles />} />
             <Route exact path="/articles/:articleId" element={<Article />} />
           </Routes>
         </div>
